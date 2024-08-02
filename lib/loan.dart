@@ -8,4 +8,9 @@ class Loan {
   DateTime? returnDate;
 
   Loan({this.book, this.loanDate, this.member, this.returnDate});
+
+  void returnBook() {
+    returnDate = DateTime.now();
+    book?.isAvailable = false;
+  }
 }
